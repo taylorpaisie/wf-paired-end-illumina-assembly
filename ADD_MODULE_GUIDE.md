@@ -13,7 +13,7 @@ If you'd like to write some code for wf-paired-end-illumina-assembly, the standa
 If you're not used to this workflow with git, you can start with some [docs from GitHub](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests) or even their [excellent `git` resources](https://try.github.io/).
 
 
-## Fork the GitHub [wf-paired-end-illumina-workflow](https://github.com/bacterial-genomics/wf-paired-end-illumina-assembly) repository
+## Fork the GitHub [wf-paired-end-illumina-workflow](https://github.com/bacterial-genomics/wf-paired-end-illumina-assembly) repository to your GitHub account
 
 The first step is to fork the  [wf-paired-end-illumina-workflow](https://github.com/bacterial-genomics/wf-paired-end-illumina-assembly) repository:
 
@@ -30,6 +30,30 @@ The first step is to fork the  [wf-paired-end-illumina-workflow](https://github.
 
 Please create a new branch with the appropriate branch name for the module you are trying to add.  This will make things easier when reviewing and ultimiately merging the branches on the repository.
 
+# Adding a module to the workflow
+
+For adding a new module to the workflow, it is important to keep up the current naming scheme for the modules, which is function of the module, followed by the name of the program/software being used. For example, the program Kraken is used to classify reads and it's module name in the workflow is:  
+- `read_classify_kraken`
+- `read_classify_kraken2`  
+Some other examples include:
+- `map_contigs_bwa`
+- `mlst_mlst` (looks strange but keeping up with the same naming scheme, this is ok)
+
+
+
+
+To add a new module to the workflow, these are all the files necessary to edit to incorporate a new module:
+
+```
+conf/modules.config
+conf/params.config
+conf/workflow.config
+modules/local/NEWMODULE/main.nf
+modules/local/NEWMODULE/params.config
+nextflow_schema.json
+subworkflows/local/NEWMODULE.nf
+workflows/assembly.nf
+```
 
 
 
