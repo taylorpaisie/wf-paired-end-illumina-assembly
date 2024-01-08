@@ -33,12 +33,12 @@ Please create a new branch with the appropriate branch name for the module you a
 # Adding a module to the workflow
 
 For adding a new module to the workflow, it is important to keep up the current naming scheme for the modules, which is function of the module, followed by the name of the program/software being used. For example, the program Kraken is used to classify reads and it's module name in the workflow is:  
-- `read_classify_kraken`
-- `read_classify_kraken2`  
-Some other examples include:
-- `map_contigs_bwa`
-- `mlst_mlst` (looks strange but keeping up with the same naming scheme, this is ok)
+- `subworkflows/local/read_classify_kraken`
+- `subworkflows/local/read_classify_kraken2`  
 
+Some other examples include:
+- `subworkflows/local/map_contigs_bwa`
+- `subworkflows/local/mlst_mlst` (looks strange but keeping up with the same naming scheme, this is ok)
 
 
 
