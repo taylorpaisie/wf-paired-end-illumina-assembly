@@ -1,6 +1,6 @@
 # How to add a module to the [wf-paired-end-illumina-workflow](https://github.com/bacterial-genomics/wf-paired-end-illumina-assembly)
 
-## Contributing to the workflow
+## Steps for contributing to the workflow
 
 If you'd like to write some code for wf-paired-end-illumina-assembly, the standard workflow is as follows:
 
@@ -58,8 +58,6 @@ Some other examples include:
 - `subworkflows/local/map_contigs_bwa`
 - `subworkflows/local/mlst_mlst` (looks strange but keeping up with the same naming scheme, this is ok)
 
-################################################################################################
-
 
 ### Adding a new step
 
@@ -74,6 +72,12 @@ If you wish to contribute a new step, please use the following coding standards:
 7. Perform local tests to validate that the new code works as expected.
 8. If applicable, add a new test command in `.github/workflow/ci.yml`.
 9. Add a description of the output files and if relevant any appropriate images from the MultiQC report to `docs/output.md`.
+
+
+#### Add parameters to 
+
+
+
 
 ### Default values
 
