@@ -97,6 +97,27 @@ The process resources can be passed on to the tool dynamically within the proces
 When you are done adding and editing all the required files to incorporate your new module into the workflow, you can submit a pull request on the [wf-paired-end-illumina-workflow](https://github.com/bacterial-genomics/wf-paired-end-illumina-assembly) GitHub page.
 
 
+### Commands to merge dev branch into a working branch
+
+#### First pull the dev branch
+```
+git checkout main
+git pull dev
+```
+
+#### Switch to dev branch and pull to make sure it is updated
+```
+git checkout dev
+git pull
+```
+
+#### Switch to working branch and merge (make sure to subsitute your branch name in place of YOURBRANCHNAME)
+```
+git checkout YOURBRANCHNAME
+git merge dev
+```
+
+
 ### Nextflow version bumping
 
 If you are using a new feature from core Nextflow, you may bump the minimum required version of nextflow in the pipeline with: `nf-core bump-version --nextflow . [min-nf-version]`
