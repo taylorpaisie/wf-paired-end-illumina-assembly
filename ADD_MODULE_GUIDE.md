@@ -117,6 +117,19 @@ git checkout YOURBRANCHNAME
 git merge dev
 ```
 
+#### Fix any merge issues
+
+#### Add and commit after merge issues are resolved
+```
+git add -u
+git commit -m "Merge dev into this branch"
+```
+
+##### Push your new branch to origin
+```
+git push -u origin YOURBRANCHNAME
+```
+
 
 ### Nextflow version bumping
 
