@@ -130,6 +130,16 @@ git commit -m "Merge dev into this branch"
 git push -u origin YOURBRANCHNAME
 ```
 
+### Merging branches can sometime lead to file conflicts, here are some potential strageies to help with merge conflicts:
+
+```
+git remote -v 
+git branch -a
+git reset --hard COMMITID
+git checkout dev
+git pull
+```
+#### Now 
 
 ### Nextflow version bumping
 
