@@ -354,12 +354,14 @@ The GenBank file is parsed for 16S rRNA gene records. If there are no 16S rRNA g
 <summary>Output files</summary>
 
 - `SSU/`
-
   - `16S-top-species.[tsv,xlsx]`: Summary of the best BLAST alignment for each sample.
   - `16S.[sample]-[assembler].fa`: 16S rRNA gene sequence of the best BLAST alignment in FastA format.
 
 - `SSU/BLAST/`
   - `[sample]-[assembler].blast.[tsv,xlsx].gz`: BLAST output 16S rRNA gene records in tab-separated value (TSV) format.
+
+- `SSU/RDP/`
+  -`[sample].RDP.tsv`: RDP Classification output in tab-separated value (TSV) format.
 
 </details>
 
