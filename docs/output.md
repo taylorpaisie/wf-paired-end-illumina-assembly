@@ -222,7 +222,7 @@ The cleaned and trimmed reads are used to assemble contigs using SPAdes or SKESA
 <summary>Output files</summary>
 
 - `Assembly/`
-  - `[sample]-[assembler]_contigs.fna`: Final genome assembly.
+  - `[sample]-[assembler].fna`: Final genome assembly.
 
 </details>
 
