@@ -67,6 +67,7 @@
   > Constantinides B, Hunt M, Crook DW. Hostile: accurate decontamination of microbial host sequences. Dec 1 2023;39(12):btad728. doi: 10.1093/bioinformatics/btad728
 
 - [Kraken](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4053813/)
+
   > Wood DE, Salzberg SL. Kraken: ultrafast metagenomic sequence classification using exact alignments. Genome Biology. 2014/03/03 2014;15(3):R46. doi:10.1186/gb-2014-15-3-r46
 
 - [Kraken 2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0)
@@ -130,6 +131,7 @@
   > Bankevich A, Nurk S, Antipov D, et al. SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing. J Comput Biol. May 2012;19(5):455-77. doi:10.1089/cmb.2012.0021
 
 - [SPAdes latest](https://pubmed.ncbi.nlm.nih.gov/32559359/)
+
   > Prjibelski A, Antipov D, Meleshko D, Lapidus A, Korobeynikov A. Using SPAdes De Novo Assembler. Curr Protoc Bioinformatics. Jun 2020;70(1):e102. doi: 10.1002/cpbi.102
 
 - [Trimmomatic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4103590/)

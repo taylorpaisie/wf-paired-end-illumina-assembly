@@ -344,7 +344,7 @@ The final assembly file is scanned against PubMLST typing schemes to determine t
 <summary>MLST output interpretation</summary>
 
 | Symbol | Meaning                               | Length          | Identity       |
-|--------|---------------------------------------|-----------------|----------------|
+| ------ | ------------------------------------- | --------------- | -------------- |
 | `n`    | exact intact allele                   | 100%            | 100%           |
 | `~n`   | novel full length allele similar to n | 100%            | &ge; `--minid` |
 | `n?`   | partial match to known allele         | &ge; `--mincov` | &ge; `--minid` |
@@ -414,6 +414,7 @@ The GenBank file is parsed for 16S rRNA gene records (with BioPython). If there 
   - `[assembler].16S_top_species_BLAST.tsv`: Summary of the best BLAST alignment for each sample.
 
 - `SSU/BLAST/`
+
   - `[sample]-[assembler].blast.tsv.gz`: Full, not yet bitscore sorted, BLASTn output for each 16S rRNA gene record in tab-separated value (TSV) format using the BLAST outfmt 6 standard with additional taxonomy fields
 
 - `SSU/RDP/`
