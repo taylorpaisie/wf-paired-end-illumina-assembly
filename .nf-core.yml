@@ -44,7 +44,6 @@ repository_type: pipeline
 
 template:
   name: bacterial-genomics/wf-paired-end-illumina-assembly
-
-update:
-  https://github.com/nf-core/modules.git:
-    nf-core: False
+# update:
+#   https://github.com/nf-core/modules.git:
+#     nf-core: False

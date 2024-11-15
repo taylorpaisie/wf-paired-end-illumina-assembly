@@ -3,6 +3,65 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v3.0.0 - November 15, 2024
+
+### `Added`
+
+- Consistent metrics reported for each read cleaning step (@chrisgulvik)
+- Added SeqFu for FastQ format validation (@chrisgulvik)
+- Checksum (SHA-512) reporting of intermediate and output files (@chrisgulvik)
+- Report full input paths for each sample (@chrisgulvik)
+- For assembly depth reporting, added stdev depth metrics; added total paired+single mapped stats (@chrisgulvik)
+
+### `Changed`
+
+- Default uses SeqKit rather than SeqTk for downsampling (@chrisgulvik)
+- Output structure and filenames revised (@chrisgulvik)
+- For MLST, exclude all MLST databases with a \*\_<int> by default (> 1) to ensure the original MLST database version is used for each taxon (e.g., excludes leptospira_2 and leptospira_3) and avoids inconsistent versions used within a run which would occasionally give one sample a leptospira and a different sample leptospira_3 making it impossible to immediately compare between samples. (@chrisgulvik)
+- For MLST, store novel FastA when that situation occurs (@chrisgulvik)
+- Sample name in outputs and file content no longer contains assembler name (@chrisgulvik)
+- Changed RDP output to exclude unneccesary data columns such as "Phylum\nphylum", "Genus\ngenus" (@chrisgulvik)
+- Use both R1 and R2 and only Phred30 for estimate bp input for more accurate estimation of genome size (@chrisgulvik)
+- Changed default to always on to store stats and FastA of discarded contigs during biopython filtering (@chrisgulvik)
+- Output filenames within `pipeline_info/` changed to show month by name and include day of the week (@chrisgulvik)
+
+### `Fixed`
+
+- Order of operations in Trimmomatic process now ensures final output reads have minimum sequence length (default: 50 bp) (@chrisgulvik)
+- Fixed issue with missing column header names in the .kraken_summary.tsv output files (@chrisgulvik)
+- Fixed trailing tab character in Kraken1 and Kraken2 output TSV summaries, which made pandas XLSX conversion fail due to different column numbers in header and data (@chrisgulvik)
+- Fixed VERSION reporting RDP bug by removing spaces (@chrisgulvik)
+
+### `Updated`
+
+- Coloring of workflow process now corresponds to tab color in XLSX output summary sheet (@chrisgulvik)
+- Docker container version updates (@chrisgulvik)
+- Updated description on output files based on new files created as well as some renamed output files (@chrisgulvik)
+
+### `Deprecated`
+
+- Removed gene calling from QUAST output summary (@chrisgulvik)
+
+## v2.4.0 - August 28, 2024
+
+### `Added`
+
+- Statistics output files during the downsampling routine are all stored as output files under their CleanedReads/<package name>/ (@chrisgulvik)
+- FastQ outputs for individual steps are now saved (perhaps temporary and to a non-default option) (@chrisgulvik)
+- SeqKit downsampling option (already had Seqtk) (@chrisgulvik)
+- Use of a default seed value for both SeqKit and Seqtk subsampling (@chrisgulvik)
+
+### `Fixed`
+
+- RDP Classifier always failed once before succeeding on retry, so a higher RAM request was given as label to make it succeed on first attempt for speed (@chrisgulvik)
+- RDP Classifier data output are not tab-delimited instead of space-delimited (@chrisgulvik)
+
+### `Updated`
+
+- TSV output data files have header names with no spaces, all underscores replaced them (@chrisgulvik)
+
+### `Deprecated`
+
 ## v2.3.1 - August 23, 2024
 
 ### `Added`
