@@ -90,7 +90,7 @@
             "description": "Downsampling options",
             "subsample_tool": {
                 "type": "string",
-                "default": "seqtk",
+                "default": "seqkit",
                 "hidden": false,
                 "description": "Specify which read subsampling tool to use during downsampling.",
                 "enum": ["seqtk", "seqkit"]
@@ -98,7 +98,7 @@
             "properties": {
                 "subsample_tool": {
                     "type": "string",
-                    "default": "seqtk",
+                    "default": "seqkit",
                     "hidden": true
                 },
                 "depth": {
