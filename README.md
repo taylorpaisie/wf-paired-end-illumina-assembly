@@ -181,8 +181,7 @@ PhiX reference [NC_001422.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_001422.1) c
                         [Default: NaN]
 ```
 
-> [!NOTE]
-> _If user does not specify inputs for parameters with a default set to `NaN`, these options will not be performed during workflow analysis._
+> [!NOTE] > _If user does not specify inputs for parameters with a default set to `NaN`, these options will not be performed during workflow analysis._
 
 ### Additional parameters
 
@@ -201,9 +200,9 @@ nextflow run \
 The most well-tested and supported is a Univa Grid Engine (UGE) job scheduler with Singularity for dependency handling.
 
 1. UGE/SGE
-    - Additional tips for UGE processing are [here](docs/HPC-UGE-scheduler.md).
+   - Additional tips for UGE processing are [here](docs/HPC-UGE-scheduler.md).
 2. No Scheduler
-    - It has also been confirmed to work on desktop and laptop environments without a job scheduler using Docker with more tips [here](docs/local-device.md).
+   - It has also been confirmed to work on desktop and laptop environments without a job scheduler using Docker with more tips [here](docs/local-device.md).
 
 ## Output
 
